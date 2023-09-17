@@ -1,0 +1,55 @@
+{
+  "name": "tshy-after",
+  "version": "1.0.0",
+  "description": "Auto set package.json after tshy run",
+  "bin": "./dist/esm/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "test": "tshy && egg-bin test",
+    "ci": "tshy && egg-bin cov",
+    "prepublishOnly": "tshy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/node-modules/tshy-after.git"
+  },
+  "keywords": [
+    "tshy"
+  ],
+  "author": "fengmk2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-modules/tshy-after/issues"
+  },
+  "homepage": "https://github.com/node-modules/tshy-after#readme",
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.6.2",
+    "coffee": "^5.5.0",
+    "egg-bin": "^6.5.2",
+    "tshy": "^1.0.0"
+  },
+  "type": "module",
+  "tshy": {
+    "exports": {
+      "./package.json": "./package.json",
+      ".": "./src/index.ts"
+    }
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/commonjs/index.d.ts",
+        "default": "./dist/commonjs/index.js"
+      }
+    }
+  }
+}
