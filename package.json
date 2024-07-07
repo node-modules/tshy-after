@@ -10,7 +10,7 @@
   "scripts": {
     "test": "tshy && egg-bin test",
     "ci": "tshy && egg-bin cov",
-    "prepublishOnly": "tshy"
+    "prepublishOnly": "tshy && node ./dist/esm/index.js"
   },
   "repository": {
     "type": "git",
