@@ -20,7 +20,18 @@ describe('test/index.test.ts', () => {
   });
 
   it('should work', async () => {
+    await coffee.spawn('tshy', { cwd })
+      .debug()
+      .expect('code', 0)
+      .end();
     await coffee.fork(bin, { cwd })
+      .debug()
+      .expect('code', 0)
+      .end();
+    await coffee.spawn('node', [
+      '--require', './dist/commonjs/index.js',
+      '-p', '123123',
+    ], { cwd })
       .debug()
       .expect('code', 0)
       .end();
