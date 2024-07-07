@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/node-modules/tshy-after/compare/v1.1.0...v1.1.1) (2024-07-07)
+
+
+### Bug Fixes
+
+* only replace `(import.meta.url)` ([84efce4](https://github.com/node-modules/tshy-after/commit/84efce4cf9652db82729bf995d372181ca9b40f0))
+
 ## [1.1.0](https://github.com/node-modules/tshy-after/compare/v1.0.0...v1.1.0) (2024-07-07)
 
 
