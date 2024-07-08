@@ -37,5 +37,25 @@ describe('test/index.test.ts', () => {
       .end();
     const pkg = JSON.parse(fs.readFileSync(packageFile, 'utf-8'));
     assert.equal(pkg.types, './dist/commonjs/index.d.ts');
+
+    // should copy image/json files
+    let pngFile = path.join(cwd, 'dist/commonjs/config/favicon.png');
+    assert.equal(fs.statSync(pngFile).isFile(), true);
+    pngFile = path.join(cwd, 'dist/esm/config/favicon.png');
+    assert.equal(fs.statSync(pngFile).isFile(), true);
+    let jsonFile = path.join(cwd, 'dist/commonjs/config/foo.json');
+    assert.equal(fs.statSync(jsonFile).isFile(), true);
+    jsonFile = path.join(cwd, 'dist/esm/config/foo.json');
+    assert.equal(fs.statSync(jsonFile).isFile(), true);
+    jsonFile = path.join(cwd, 'dist/commonjs/bar.json');
+    assert.equal(fs.statSync(jsonFile).isFile(), true);
+    jsonFile = path.join(cwd, 'dist/esm/bar.json');
+    assert.equal(fs.statSync(jsonFile).isFile(), true);
+
+    // should dist/package.json exists, include name and version
+    const distPackageFile = path.join(cwd, 'dist/package.json');
+    const distPkg = JSON.parse(fs.readFileSync(distPackageFile, 'utf-8'));
+    assert.equal(distPkg.name, 'tshy-after');
+    assert.equal(distPkg.version, '1.0.0');
   });
 });
