@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/node-modules/tshy-after/compare/v1.1.1...v1.2.0) (2024-07-08)
+
+
+### Features
+
+* auto copy image/json/web files ([#2](https://github.com/node-modules/tshy-after/issues/2)) ([b7c740a](https://github.com/node-modules/tshy-after/commit/b7c740a7f25c52028962d9d1a202deea00d0b70b))
+
 ## [1.1.1](https://github.com/node-modules/tshy-after/compare/v1.1.0...v1.1.1) (2024-07-07)
 
 
