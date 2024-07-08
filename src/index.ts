@@ -3,7 +3,7 @@
 import { writeFileSync, readFileSync, readdirSync, statSync, copyFileSync } from 'node:fs'
 import path from 'node:path'
 
-const cwd = process.cwd() + '/';
+const cwd = process.cwd() + path.sep;
 
 const pkg = JSON.parse(readFileSync(path.join(cwd, 'package.json'), 'utf-8'));
 // make sure commonjs *.d.ts can import types
