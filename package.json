@@ -30,7 +30,7 @@
     "@types/node": "^20.6.2",
     "coffee": "^5.5.0",
     "egg-bin": "^6.5.2",
-    "tshy": "^1.0.0"
+    "tshy": "^2.0.0"
   },
   "type": "module",
   "tshy": {
@@ -43,12 +43,10 @@
     "./package.json": "./package.json",
     ".": {
       "import": {
-        "source": "./src/index.ts",
         "types": "./dist/esm/index.d.ts",
         "default": "./dist/esm/index.js"
       },
       "require": {
-        "source": "./src/index.ts",
         "types": "./dist/commonjs/index.d.ts",
         "default": "./dist/commonjs/index.js"
       }
