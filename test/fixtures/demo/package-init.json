@@ -25,6 +25,16 @@
     "url": "https://github.com/node-modules/tshy-after/issues"
   },
   "homepage": "https://github.com/node-modules/tshy-after#readme",
+  "eggPlugin": {
+    "name": "egg-mock",
+    "exports": {
+      "import": "./dist/esm",
+      "require": "./dist/commonjs"
+    }
+  },
+  "egg": {
+    "framework": true
+  },
   "devDependencies": {
     "@types/mocha": "^10.0.1",
     "@types/node": "^20.6.2",

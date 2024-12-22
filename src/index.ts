@@ -13,6 +13,8 @@ writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n')
 writeFileSync('dist/package.json', JSON.stringify({
   name: pkg.name,
   version: pkg.version,
+  eggPlugin: pkg.eggPlugin,
+  egg: pkg.egg,
 }, null, 2) + '\n')
 
 // Replace all `( import.meta.url )` into `('import_meta_url_placeholder_by_tshy_after')` on commonjs.

@@ -1,5 +1,15 @@
 # tshy-after
 
+[![NPM version][npm-image]][npm-url]
+[![Node.js CI](https://github.com/node-modules/tshy-after/actions/workflows/nodejs.yml/badge.svg)](https://github.com/node-modules/tshy-after/actions/workflows/nodejs.yml)
+[![npm download][download-image]][download-url]
+[![Node.js Version](https://img.shields.io/node/v/tshy-after.svg?style=flat)](https://nodejs.org/en/download/)
+
+[npm-image]: https://img.shields.io/npm/v/tshy-after.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/tshy-after
+[download-image]: https://img.shields.io/npm/dm/tshy-after.svg?style=flat-square
+[download-url]: https://npmjs.org/package/tshy-after
+
 Auto set package.json after [tshy](https://github.com/isaacs/tshy) run
 
 ## keep `types`
@@ -28,3 +38,17 @@ export function getDirname() {
   return path.dirname(fileURLToPath(import.meta.url));
 }
 ```
+
+## Auto copy egg meta properties package.json
+
+Copy `eggPlugin`, `egg` to `dist/package.json`
+
+## License
+
+[MIT](LICENSE)
+
+## Contributors
+
+[![Contributors](https://contrib.rocks/image?repo=node-modules/tshy-after)](https://github.com/node-modules/tshy-after/graphs/contributors)
+
+Made with [contributors-img](https://contrib.rocks).
