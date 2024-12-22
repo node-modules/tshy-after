@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/node-modules/tshy-after/compare/v1.2.0...v1.3.0) (2024-12-22)
+
+
+### Features
+
+* auto copy egg meta properties ([#3](https://github.com/node-modules/tshy-after/issues/3)) ([8b1be69](https://github.com/node-modules/tshy-after/commit/8b1be69fc1f9717c1846456c4687d88a17a6ff66))
+
 ## [1.2.0](https://github.com/node-modules/tshy-after/compare/v1.1.1...v1.2.0) (2024-07-08)
 
 
