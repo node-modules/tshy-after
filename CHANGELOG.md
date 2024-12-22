@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/node-modules/tshy-after/compare/v1.3.0...v1.3.1) (2024-12-22)
+
+
+### Bug Fixes
+
+* ignore egg properties ([4321bac](https://github.com/node-modules/tshy-after/commit/4321bac3bf34ec3fa387de86ece34eb12859b918))
+
 ## [1.3.0](https://github.com/node-modules/tshy-after/compare/v1.2.0...v1.3.0) (2024-12-22)
 
 
