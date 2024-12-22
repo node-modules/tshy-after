@@ -39,10 +39,6 @@ export function getDirname() {
 }
 ```
 
-## Auto copy egg meta properties package.json
-
-Copy `eggPlugin`, `egg` to `dist/package.json`
-
 ## License
 
 [MIT](LICENSE)

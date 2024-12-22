@@ -57,15 +57,5 @@ describe('test/index.test.ts', () => {
     const distPkg = JSON.parse(fs.readFileSync(distPackageFile, 'utf-8'));
     assert.equal(distPkg.name, 'tshy-after');
     assert.equal(distPkg.version, '1.0.0');
-    assert.deepEqual(distPkg.eggPlugin, {
-      "name": "egg-mock",
-      "exports": {
-        "import": "./dist/esm",
-        "require": "./dist/commonjs"
-      },
-    });
-    assert.deepEqual(distPkg.egg, {
-      framework: true,
-    });
   });
 });
