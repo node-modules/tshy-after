@@ -130,3 +130,5 @@ dist
 .pnp.*
 
 .tshy
+package-lock.json
+.package-lock.json

@@ -19,6 +19,10 @@ writeFileSync('dist/package.json', JSON.stringify({
 const IMPORT_META_URL = '(' + 'import.meta.url' + ')';
 const IMPORT_META_URL_PLACE_HOLDER = '(\'import_meta_url_placeholder_by_tshy_after\')';
 
+// Replace all `import.meta.resolve (xxx)` into `require.resolve(xxx)` on commonjs.
+const IMPORT_META_RESOLVE = 'import.meta.resolve' + '(';
+const IMPORT_META_RESOLVE_PLACE_HOLDER = 'require.resolve(';
+
 function replaceImportMetaUrl(baseDir: string) {
   const names = readdirSync(baseDir);
   for (const name of names) {
@@ -31,12 +35,22 @@ function replaceImportMetaUrl(baseDir: string) {
     if (!filepath.endsWith('.js')) {
       continue;
     }
-    const content = readFileSync(filepath, 'utf-8');
-    if (!content.includes(IMPORT_META_URL)) {
-      continue;
+
+    let content = readFileSync(filepath, 'utf-8');
+    let changed = false;
+    if (content.includes(IMPORT_META_URL)) {
+      changed = true;
+      content = content.replaceAll(IMPORT_META_URL, IMPORT_META_URL_PLACE_HOLDER);
+      console.log('Auto fix "import.meta.url" on %s', filepath.replace(cwd, ''));
     }
-    writeFileSync(filepath, content.replaceAll(IMPORT_META_URL, IMPORT_META_URL_PLACE_HOLDER));
-    console.log('Auto fix "import.meta.url" on %s', filepath.replace(cwd, ''));
+    if (content.includes(IMPORT_META_RESOLVE)) {
+      changed = true;
+      content = content.replaceAll(IMPORT_META_RESOLVE, IMPORT_META_RESOLVE_PLACE_HOLDER);
+      console.log('Auto fix "import.meta.resolve" on %s', filepath.replace(cwd, ''));
+    }
+    if (changed) {
+      writeFileSync(filepath, content);
+    }
   }
 }
 replaceImportMetaUrl(path.join(cwd, 'dist/commonjs'));

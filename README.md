@@ -4,6 +4,7 @@
 [![Node.js CI](https://github.com/node-modules/tshy-after/actions/workflows/nodejs.yml/badge.svg)](https://github.com/node-modules/tshy-after/actions/workflows/nodejs.yml)
 [![npm download][download-image]][download-url]
 [![Node.js Version](https://img.shields.io/node/v/tshy-after.svg?style=flat)](https://nodejs.org/en/download/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
 
 [npm-image]: https://img.shields.io/npm/v/tshy-after.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/tshy-after
@@ -16,7 +17,7 @@ Auto set package.json after [tshy](https://github.com/isaacs/tshy) run
 
 Set `package.types` to `package.exports['.'].require.types`
 
-## Auto fix `import.meta.url` SyntaxError on CJS
+## Auto fix `import.meta.url` and `import.meta.resolve` SyntaxError on CJS
 
 ```bash
 SyntaxError: Cannot use 'import.meta' outside a module
