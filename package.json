@@ -1,6 +1,6 @@
 {
   "name": "tshy-after",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "Auto set package.json after tshy run",
   "bin": "./dist/esm/index.js",
   "files": [

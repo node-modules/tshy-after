@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/node-modules/tshy-after/compare/v1.3.1...v1.4.0) (2024-12-24)
+
+
+### Features
+
+* auto fix import.meta.resolve SyntaxError on CJS ([#4](https://github.com/node-modules/tshy-after/issues/4)) ([de6aa45](https://github.com/node-modules/tshy-after/commit/de6aa45f06d970f12ba1d3fb1dd045ea53d16c38))
+
 ## [1.3.1](https://github.com/node-modules/tshy-after/compare/v1.3.0...v1.3.1) (2024-12-22)
 
 
