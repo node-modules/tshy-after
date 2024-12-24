@@ -8,3 +8,11 @@ export function getDirname() {
   // @ts-ignore
   return path.dirname(fileURLToPath(import.meta.url));
 }
+
+export function resolve(filename: string) {
+  if (typeof require === 'function') {
+    return require.resolve(filename);
+  }
+  // @ts-ignore
+  return import.meta.resolve(filename);
+}
