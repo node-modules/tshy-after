@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { writeFileSync, readFileSync, readdirSync, statSync, copyFileSync } from 'node:fs'
+import { writeFileSync, readFileSync, readdirSync, statSync, copyFileSync, mkdirSync } from 'node:fs'
 import path from 'node:path'
 
 const cwd = process.cwd() + path.sep;
@@ -78,9 +78,11 @@ function copyFiles(baseDir: string) {
       continue;
     }
     let targetFilepath = filepath.replace(sourceDir, commonjsDir);
+    mkdirSync(path.dirname(targetFilepath), { recursive: true });
     copyFileSync(filepath, targetFilepath);
     console.log('Copy %s to %s', filepath.replace(cwd, ''), targetFilepath.replace(cwd, ''));
     targetFilepath = filepath.replace(sourceDir, esmDir);
+    mkdirSync(path.dirname(targetFilepath), { recursive: true });
     copyFileSync(filepath, targetFilepath);
     console.log('Copy %s to %s', filepath.replace(cwd, ''), targetFilepath.replace(cwd, ''));
   }
