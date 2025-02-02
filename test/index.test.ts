@@ -52,6 +52,15 @@ describe('test/index.test.ts', () => {
     jsonFile = path.join(cwd, 'dist/esm/bar.json');
     assert.equal(fs.statSync(jsonFile).isFile(), true);
 
+    let htmlFile = path.join(cwd, 'dist/commonjs/templates/foo.html');
+    assert.equal(fs.statSync(htmlFile).isFile(), true);
+    htmlFile = path.join(cwd, 'dist/esm/templates/foo.html');
+    assert.equal(fs.statSync(htmlFile).isFile(), true);
+    htmlFile = path.join(cwd, 'dist/commonjs/templates/bar.html');
+    assert.equal(fs.statSync(htmlFile).isFile(), true);
+    htmlFile = path.join(cwd, 'dist/esm/templates/bar.html');
+    assert.equal(fs.statSync(htmlFile).isFile(), true);
+
     // should dist/package.json exists, include name and version
     const distPackageFile = path.join(cwd, 'dist/package.json');
     const distPkg = JSON.parse(fs.readFileSync(distPackageFile, 'utf-8'));
