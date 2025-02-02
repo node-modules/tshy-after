@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/node-modules/tshy-after/compare/v1.4.0...v1.4.1) (2025-02-02)
+
+
+### Bug Fixes
+
+* make sure copy file parent dir exits ([#5](https://github.com/node-modules/tshy-after/issues/5)) ([19c442a](https://github.com/node-modules/tshy-after/commit/19c442a1b80321a52bc02ba16244cb59fef8f462))
+
 ## [1.4.0](https://github.com/node-modules/tshy-after/compare/v1.3.1...v1.4.0) (2024-12-24)
 
 
